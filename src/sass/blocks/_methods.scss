@@ -1,0 +1,101 @@
+.methods {
+    padding-top: 120px;
+    background-color: #dbd5d5ec;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(270px, auto));
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        grid-auto-rows: 1fr;
+        gap: 13px;
+        margin-top: 60px;
+        padding: 0 10px;
+        &-percent {
+            display: grid;
+            grid-template-columns: repeat(3, 350px);
+            grid-template-rows: repeat(2, 70px);
+            grid-auto-rows: 1;
+            row-gap: 30px;
+            column-gap: 45px;
+            margin-top: 120px;
+        }
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid #000000;
+        &-img {
+            width: 208px;
+            img {
+                max-width: 100%;
+            }
+        }
+        &-descr {
+            margin-top: 15px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-jquery {
+            padding: 45px 30px 25px 30px;
+        }
+        &-mongo {
+            padding: 38px 30px 25px 30px;
+        }
+        &-technology-name {
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            &-jquery {
+                margin-top: 33px;
+            }
+            &-mongo {
+                margin-top: 32px;
+            }
+        }
+        &-percent {
+            position: relative;
+            display: grid;
+            grid-template-columns: 169px 34px;
+            grid-template-rows: 36px 14px;
+            grid-auto-rows: 1fr;
+            align-content: space-between;
+            justify-content: space-between;
+            &-title {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 21px;
+                @include before_circle;
+                z-index: 1;
+                margin-left: 13px;
+                margin-top: 8px;
+                &:before {
+                    top: 0;
+                    left: -13px;
+                    top: -8px;
+                }
+            }
+            &-text {
+                display: flex;
+                justify-content: flex-end;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                margin-top: 8px;
+            }
+            &-scale_main {
+                grid-column: 1/3;
+                background-color: #000;
+                width: 100%;
+                height: 14px;
+                background: #E8E4DE;
+                border-radius: 4px;
+                span {
+                    grid-column: 1/3;
+                    height: 14px;
+                    border-radius: 4px;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
